@@ -71,47 +71,100 @@ div#main-container {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 15px;
-	background-color: rgb(117, 117, 117);
+	background-color: rgba(214, 214, 214, 0.336);
 	border-radius: 5px;
-	border: 1px solid rgb(70, 70, 70);
-}
+
 
 // Nav Bar
 
-nav {
-	.flex();
-	flex-direction: row-reverse;
-	width: 100%;
-
-
-
-	a {
-		text-decoration: none;
-		padding: 5px 15px;
-		color: white;
-	}
-}
-
-section.intro {
-	.flex();
-	align-items: center;
-	justify-content: center;
-	div {
-		color: black;
-		text-align: center;
-		margin: 35px;
-		// .flex();
-		h1 {
-			font-size: 2.5rem;
-		}
-		p {
-			font-size: 1.0rem;
+	nav {
+		.flex();
+		flex-direction: row-reverse;
+		width: 100%;
+		font-size: 1.2rem;
+		margin-bottom: 3%;
+		a {
+			text-decoration: none;
+			padding: 5px 15px;
+			color: rgb(0, 0, 0);
 		}
 	}
-	img{
-		width: 25%;
-		height: 25%;
-		border-radius: 50%;
-		margin: 35px;
+
+	section.intro {
+		.flex();
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		div {
+			color: black;
+			text-align: center;
+			margin: 35px;
+			// .flex();
+			h1 {
+				font-size: 2.5rem;
+			}
+			p.subtitle {
+				font-size: 1.0rem;
+			}
+		}
+		img{
+			width: 25%;
+			height: 25%;
+			border-radius: 50%;
+			margin: 35px;
+		}
+		p.intro {
+			width: 50%;
+			text-align: left;
+			font-size: 1.5rem;
+		}
 	}
-}
+	hr.first {
+		width: 75%;
+		margin: 5% auto;
+	}
+	section.boxes {
+		.flex();
+		flex-wrap: wrap;
+		justify-content: center;
+		div.box {
+			width: 30%;
+			margin: 5%;
+
+			box-shadow:3px 3px 15px -6px rgb(153, 153, 153);
+			border-radius: 1px;
+			h2 {
+				text-align: center;
+				font-size: 1.6rem;
+				margin: 10px 0;
+			}
+			div.skills {
+				.flex();
+				justify-content: center;
+				flex-wrap: wrap;
+				font-size: 4rem;
+				color: rgb(100, 100, 100);
+				i {
+					margin: 10px;
+				}
+			}
+			ul.work {
+				text-align: center;
+				height: 100%;
+				li {
+					margin: 15px 0;
+				}
+			}
+			div.contact {
+				.flex();
+				padding: 15px;
+				font-size: 3.5rem;
+				justify-content: space-around;
+			}
+
+		}
+	}
+
+
+
+} //Main Container

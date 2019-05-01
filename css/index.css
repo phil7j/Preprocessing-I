@@ -140,39 +140,89 @@ div#main-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 15px;
-  background-color: #757575;
+  background-color: rgba(214, 214, 214, 0.336);
   border-radius: 5px;
-  border: 1px solid #464646;
 }
-nav {
+div#main-container nav {
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 3%;
 }
-nav a {
+div#main-container nav a {
   text-decoration: none;
   padding: 5px 15px;
-  color: white;
+  color: #000000;
 }
-section.intro {
+div#main-container section.intro {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-section.intro div {
+div#main-container section.intro div {
   color: black;
   text-align: center;
   margin: 35px;
 }
-section.intro div h1 {
+div#main-container section.intro div h1 {
   font-size: 2.5rem;
 }
-section.intro div p {
+div#main-container section.intro div p.subtitle {
   font-size: 1rem;
 }
-section.intro img {
+div#main-container section.intro img {
   width: 25%;
   height: 25%;
   border-radius: 50%;
   margin: 35px;
+}
+div#main-container section.intro p.intro {
+  width: 50%;
+  text-align: left;
+  font-size: 1.5rem;
+}
+div#main-container hr.first {
+  width: 75%;
+  margin: 5% auto;
+}
+div#main-container section.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+div#main-container section.boxes div.box {
+  width: 30%;
+  margin: 5%;
+  box-shadow: 3px 3px 15px -6px #999999;
+  border-radius: 1px;
+}
+div#main-container section.boxes div.box h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+div#main-container section.boxes div.box div.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 4rem;
+  color: #646464;
+}
+div#main-container section.boxes div.box div.skills i {
+  margin: 10px;
+}
+div#main-container section.boxes div.box ul.work {
+  text-align: center;
+  height: 100%;
+}
+div#main-container section.boxes div.box ul.work li {
+  margin: 15px 0;
+}
+div#main-container section.boxes div.box div.contact {
+  display: flex;
+  padding: 15px;
+  font-size: 3.5rem;
+  justify-content: space-around;
 }
