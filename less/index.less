@@ -1,3 +1,22 @@
+// Variables
+@main-bg: rgba(214, 214, 214, 0.021);
+@box-bg: rgba(214, 214, 214, 0.219);
+@hover: rgba(243, 43, 43, 0.966);
+// Mix-Ins
+.flex(){
+	display: flex;
+}
+.main-font() {
+	font-family: 'Basic', sans-serif;
+}
+
+.hover(){
+	transition: color 400ms;
+	&:hover{
+		color: @hover;
+	}
+}
+
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -59,10 +78,7 @@ html, body {
 	width: 100%;
 }
 
-// Mix-Ins
-.flex(){
-	display: flex;
-}
+
 
 // Main Container
 
@@ -71,13 +87,14 @@ div#main-container {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 15px;
-	background-color: rgba(214, 214, 214, 0.336);
+	background-color: @main-bg;
 	border-radius: 5px;
 
 
 // Nav Bar
 
 	nav {
+		.main-font();
 		.flex();
 		flex-direction: row-reverse;
 		width: 100%;
@@ -87,6 +104,7 @@ div#main-container {
 			text-decoration: none;
 			padding: 5px 15px;
 			color: rgb(0, 0, 0);
+			.hover();
 		}
 	}
 
@@ -101,10 +119,13 @@ div#main-container {
 			margin: 35px;
 			// .flex();
 			h1 {
+				.main-font();
 				font-size: 2.5rem;
 			}
 			p.subtitle {
 				font-size: 1.0rem;
+				.main-font();
+				margin: 10px 0;
 			}
 		}
 		img{
@@ -117,6 +138,8 @@ div#main-container {
 			width: 50%;
 			text-align: left;
 			font-size: 1.5rem;
+			.main-font();
+			margin: 5% 0;
 		}
 	}
 	hr.first {
@@ -128,12 +151,19 @@ div#main-container {
 		flex-wrap: wrap;
 		justify-content: center;
 		div.box {
-			width: 30%;
+			width: 35%;
 			margin: 5%;
-
+			background: @box-bg;
 			box-shadow:3px 3px 15px -6px rgb(153, 153, 153);
 			border-radius: 1px;
+			@media (max-width: 890px) {
+				width: 50%;
+			}
+			@media (max-width: 550px) {
+				width: 100%;
+			}
 			h2 {
+				.main-font();
 				text-align: center;
 				font-size: 1.6rem;
 				margin: 10px 0;
@@ -147,12 +177,31 @@ div#main-container {
 				i {
 					margin: 10px;
 				}
+				i:nth-child(1) {
+					color: red;
+				  }
+				i:nth-child(2) {
+					color: blue;
+				  }
+				i:nth-child(3) {
+					color: purple;
+				  }
+				i:nth-child(4) {
+					color: yellowgreen;
+				  }
+				i:nth-child(5) {
+					color: darkgreen;
+				  }
+				i:nth-child(6) {
+					color: lightblue;
+				  }
 			}
 			ul.work {
 				text-align: center;
 				height: 100%;
 				li {
 					margin: 15px 0;
+					.main-font();
 				}
 			}
 			div.contact {
@@ -160,6 +209,9 @@ div#main-container {
 				padding: 15px;
 				font-size: 3.5rem;
 				justify-content: space-around;
+				a {
+					color: black;
+				}
 			}
 
 		}

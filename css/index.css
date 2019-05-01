@@ -140,10 +140,11 @@ div#main-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 15px;
-  background-color: rgba(214, 214, 214, 0.336);
+  background-color: rgba(214, 214, 214, 0.021);
   border-radius: 5px;
 }
 div#main-container nav {
+  font-family: 'Basic', sans-serif;
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
@@ -154,6 +155,10 @@ div#main-container nav a {
   text-decoration: none;
   padding: 5px 15px;
   color: #000000;
+  transition: color 400ms;
+}
+div#main-container nav a:hover {
+  color: rgba(243, 43, 43, 0.966);
 }
 div#main-container section.intro {
   display: flex;
@@ -167,10 +172,13 @@ div#main-container section.intro div {
   margin: 35px;
 }
 div#main-container section.intro div h1 {
+  font-family: 'Basic', sans-serif;
   font-size: 2.5rem;
 }
 div#main-container section.intro div p.subtitle {
   font-size: 1rem;
+  font-family: 'Basic', sans-serif;
+  margin: 10px 0;
 }
 div#main-container section.intro img {
   width: 25%;
@@ -182,6 +190,8 @@ div#main-container section.intro p.intro {
   width: 50%;
   text-align: left;
   font-size: 1.5rem;
+  font-family: 'Basic', sans-serif;
+  margin: 5% 0;
 }
 div#main-container hr.first {
   width: 75%;
@@ -193,12 +203,24 @@ div#main-container section.boxes {
   justify-content: center;
 }
 div#main-container section.boxes div.box {
-  width: 30%;
+  width: 35%;
   margin: 5%;
+  background: rgba(214, 214, 214, 0.219);
   box-shadow: 3px 3px 15px -6px #999999;
   border-radius: 1px;
 }
+@media (max-width: 890px) {
+  div#main-container section.boxes div.box {
+    width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  div#main-container section.boxes div.box {
+    width: 100%;
+  }
+}
 div#main-container section.boxes div.box h2 {
+  font-family: 'Basic', sans-serif;
   text-align: center;
   font-size: 1.6rem;
   margin: 10px 0;
@@ -213,16 +235,38 @@ div#main-container section.boxes div.box div.skills {
 div#main-container section.boxes div.box div.skills i {
   margin: 10px;
 }
+div#main-container section.boxes div.box div.skills i:nth-child(1) {
+  color: red;
+}
+div#main-container section.boxes div.box div.skills i:nth-child(2) {
+  color: blue;
+}
+div#main-container section.boxes div.box div.skills i:nth-child(3) {
+  color: purple;
+}
+div#main-container section.boxes div.box div.skills i:nth-child(4) {
+  color: yellowgreen;
+}
+div#main-container section.boxes div.box div.skills i:nth-child(5) {
+  color: darkgreen;
+}
+div#main-container section.boxes div.box div.skills i:nth-child(6) {
+  color: lightblue;
+}
 div#main-container section.boxes div.box ul.work {
   text-align: center;
   height: 100%;
 }
 div#main-container section.boxes div.box ul.work li {
   margin: 15px 0;
+  font-family: 'Basic', sans-serif;
 }
 div#main-container section.boxes div.box div.contact {
   display: flex;
   padding: 15px;
   font-size: 3.5rem;
   justify-content: space-around;
+}
+div#main-container section.boxes div.box div.contact a {
+  color: black;
 }
